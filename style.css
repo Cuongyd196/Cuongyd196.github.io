@@ -1,0 +1,138 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ff0000, #990000);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Khung chính */
+.countdown-container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    border: 3px solid #ffcc00;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* Trang trí */
+.decorations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.lantern {
+    width: 60px;
+}
+
+.year-text {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* Countdown */
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.time-box {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.red-box {
+    background-color: #ff6666;
+}
+
+.yellow-box {
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.green-box {
+    background-color: #66cc66;
+}
+
+.blue-box {
+    background-color: #6699ff;
+}
+
+/* Số và nhãn */
+.number {
+    font-size: 36px;
+}
+
+.label {
+    font-size: 22px;
+}
+
+/* Linh vật và thông điệp */
+.mascot {
+    margin-top: 20px;
+}
+
+.snake {
+    width: 120px;
+}
+
+.footer-text {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.highlight {
+    color: #ffcc00;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #000;
+}
+
+@media (max-width: 768px) {
+    .time-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+
+    .label {
+        font-size: 12px;
+    }
+
+    .snake {
+        width: 100px;
+    }
+}
+
+.footer {
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: center;
+    color: #a99494;
+}

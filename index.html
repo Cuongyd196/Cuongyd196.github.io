@@ -1,89 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown to Tet Nguyen Dan 2025</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-image: url('./tet.jpg');
-            
-        }
-        .countdown-container {
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .countdown-title {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .countdown {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .countdown div {
-            font-size: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #e0e0e0;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .countdown div:hover {
-            background-color: #0073e6;
-            color: #fff;
-        }
-    </style>
+    <title>Countdown Tết Ất Tỵ 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
+
 <body>
     <div class="countdown-container">
-        <div class="countdown-title">Countdown to Tet Nguyen Dan 2025</div>
+        <!-- Trang trí trên cùng -->
+        <div class="decorations">
+            <img src="/images/denlong.png" alt="Đèn lồng" class="lantern left">
+            <img src="/images/denlong.png" alt="Đèn lồng" class="lantern right">
+            <p class="year-text">Tết Ất Tỵ 2025</p>
+        </div>
+        <!-- Hộp countdown -->
         <div class="countdown">
-            <div id="days">0 Days</div>
-            <div id="hours">0 Hours</div>
-            <div id="minutes">0 Minutes</div>
-            <div id="seconds">0 Seconds</div>
+            <div class="time-box red-box">
+                <p class="number">0</p>
+                <p class="label">NGÀY</p>
+            </div>
+            <div class="time-box yellow-box">
+                <p class="number">0</p>
+                <p class="label">GIỜ</p>
+            </div>
+            <div class="time-box green-box">
+                <p class="number">0</p>
+                <p class="label">PHÚT</p>
+            </div>
+            <div class="time-box blue-box">
+                <p class="number">0</p>
+                <p class="label">GIÂY</p>
+            </div>
+        </div>
+        <!-- Linh vật và thông điệp -->
+        <div class="mascot">
+            <img src="/images/linhvatran.jpg" alt="Linh vật rắn" class="snake">
+            <p class="footer-text">
+                Cùng đếm ngược đến <span class="highlight">Đêm Giao Thừa Tết Ất Tỵ</span> ( 2025 ÂL - 29/01/2025 DL)
+            </p>
+            <footer class="footer">
+                &copy; 2025 cuongit.net
+            </footer>
         </div>
     </div>
-
-    <script>
-        function updateCountdown() {
-            const tetDate = new Date('January 29, 2025 00:00:00').getTime();
-            const now = new Date().getTime();
-            const distance = tetDate - now;
-
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById('days').innerText = `${days} Days`;
-            document.getElementById('hours').innerText = `${hours} Hours`;
-            document.getElementById('minutes').innerText = `${minutes} Minutes`;
-            document.getElementById('seconds').innerText = `${seconds} Seconds`;
-
-            if (distance < 0) {
-                clearInterval(countdownInterval);
-                document.querySelector('.countdown-container').innerHTML = '<div class="countdown-title">Happy Tet Nguyen Dan 2025!</div>';
-            }
-        }
-
-        const countdownInterval = setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
 </body>
+
 </html>
