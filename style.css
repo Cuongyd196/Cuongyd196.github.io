@@ -1,4 +1,3 @@
-/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
@@ -6,133 +5,165 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #ff0000, #990000);
-    color: #fff;
-    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-/* Khung chính */
-.countdown-container {
-    max-width: 800px;
-    width: 100%;
+    justify-content: center;
     padding: 20px;
-    border: 3px solid #ffcc00;
+}
+
+.profile-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
-    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
-/* Trang trí */
-.decorations {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
 }
 
-.lantern {
-    width: 60px;
-}
-
-.year-text {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffcc00;
-    text-shadow: 2px 2px 4px #000;
-}
-
-/* Countdown */
-.countdown {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.time-box {
-    width: 80px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    font-weight: bold;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
-}
-
-.red-box {
-    background-color: #ff6666;
-}
-
-.yellow-box {
-    background-color: #ffcc00;
-    color: #000;
-}
-
-.green-box {
-    background-color: #66cc66;
-}
-
-.blue-box {
-    background-color: #6699ff;
-}
-
-/* Số và nhãn */
-.number {
-    font-size: 36px;
-}
-
-.label {
-    font-size: 22px;
-}
-
-/* Linh vật và thông điệp */
-.mascot {
-    margin-top: 20px;
-}
-
-.snake {
+.profile-avatar {
     width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    overflow: hidden;
+    border: 4px solid #fff;
 }
 
-.footer-text {
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profile-title {
     font-size: 16px;
-    margin-top: 10px;
+    color: #666;
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
-.highlight {
-    color: #ffcc00;
-    font-weight: bold;
-    text-shadow: 1px 1px 4px #000;
+.profile-description {
+    font-size: 14px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 30px;
 }
 
-@media (max-width: 768px) {
-    .time-box {
-        width: 60px;
-        height: 60px;
-    }
-
-    .number {
-        font-size: 20px;
-    }
-
-    .label {
-        font-size: 12px;
-    }
-
-    .snake {
-        width: 100px;
-    }
+.social-links {
+    display: grid;
+    gap: 15px;
 }
+
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: #667eea;
+}
+
+.social-link i {
+    font-size: 20px;
+    margin-right: 15px;
+    width: 24px;
+    text-align: center;
+}
+
+.social-link.website { color: #2563eb; }
+.social-link.website:hover { background: #eff6ff; }
+
+.social-link.tiktok { color: #ff0050; }
+.social-link.tiktok:hover { background: #fff1f2; }
+
+.social-link.youtube { color: #ff0000; }
+.social-link.youtube:hover { background: #fef2f2; }
+
+.social-link.facebook { color: #1877f2; }
+.social-link.facebook:hover { background: #f0f8ff; }
+
+.social-link.group { color: #42b883; }
+.social-link.group:hover { background: #f0fdf4; }
+
+.social-link.personal { color: #8b5cf6; }
+.social-link.personal:hover { background: #faf5ff; }
+
+.social-link.github { color: #333; }
+.social-link.github:hover { background: #f6f8fa; }
+
+.social-link.cv { color: #e74c3c; }
+.social-link.cv:hover { background: #fdf2f2; }
 
 .footer {
-    font-size: 16px;
-    margin-top: 10px;
-    text-align: center;
-    color: #a99494;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #999;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .profile-name {
+        font-size: 24px;
+    }
+    
+    .social-link {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
 }
