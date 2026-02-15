@@ -199,6 +199,7 @@ body {
 .social-link.personal i { color: #8b5cf6; }
 .social-link.github i { color: #1f2937; }
 .social-link.cv i { color: #f97316; }
+.social-link.telegram i { color: #0088cc; }
 
 /* Donate Section */
 .donate-section {
@@ -476,4 +477,73 @@ body {
         padding: 12px 15px;
         font-size: 14px;
     }
+}
+
+/* Community Section */
+.community-section {
+    background: linear-gradient(145deg, #f0f8ff, #fff); /* Light blue gradient */
+    border: 1px solid #cceeff;
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 32px;
+    margin-bottom: 25px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.15);
+}
+
+.community-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #0088cc; /* Telegram color */
+}
+
+.community-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0088cc;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.community-content {
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.community-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #0088cc, #00aaff);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+    border: none;
+    width: 100%;
+}
+
+.community-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 136, 204, 0.4);
+    background: linear-gradient(45deg, #0077b3, #0099e6);
+}
+
+.community-button i {
+    margin-right: 8px;
+    font-size: 18px;
 }
