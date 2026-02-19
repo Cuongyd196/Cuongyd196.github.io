@@ -490,7 +490,7 @@ body {
     text-align: left;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 136, 204, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 104, 255, 0.15);
 }
 
 .community-section::before {
@@ -500,13 +500,13 @@ body {
     left: 0;
     width: 4px;
     height: 100%;
-    background: #0088cc; /* Telegram color */
+    background: #0068FF; /* Zalo color */
 }
 
 .community-title {
     font-size: 18px;
     font-weight: 700;
-    color: #0088cc;
+    color: #0068FF;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
@@ -524,7 +524,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(45deg, #0088cc, #00aaff);
+    background: linear-gradient(45deg, #0068FF, #0041C2);
     color: white;
     text-decoration: none;
     padding: 12px 20px;
@@ -532,15 +532,15 @@ body {
     font-weight: 600;
     font-size: 15px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 136, 204, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 104, 255, 0.3);
     border: none;
     width: 100%;
 }
 
 .community-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 136, 204, 0.4);
-    background: linear-gradient(45deg, #0077b3, #0099e6);
+    box-shadow: 0 6px 15px rgba(0, 104, 255, 0.4);
+    background: linear-gradient(45deg, #0056D6, #0036A0);
 }
 
 .community-button i {
